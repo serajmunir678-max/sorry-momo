@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>For My Momo ❤️</title>
+<style>
+:root{
+  --pink:#ff6f9f;--deep:#bd285f;--rose:#ffb4ce;--soft:#fff0f6;
+  --cream:#fffaf7;--ink:#71334d;--white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;min-height:100vh;overflow-x:hidden;text-align:center;
+  font-family:"Trebuchet MS",Arial,sans-serif;color:var(--ink);
+  background:radial-gradient(circle at top left,#fff 0,#fff0f6 42%,#ffe1ed 100%);
+}
+button{font:inherit;cursor:pointer}
+.topbar{padding:17px 12px 9px;color:var(--deep);font-size:12px;font-weight:800;letter-spacing:2px}
+.progress{height:5px;max-width:560px;margin:0 auto 14px;background:#ffd6e5;border-radius:9px;overflow:hidden}
+#bar{height:100%;width:16.66%;background:linear-gradient(90deg,#ff8db4,#c92768);transition:width .4s}
+main{padding:8px 14px 35px;position:relative;z-index:1}
+.screen{
+  display:none;max-width:570px;margin:10px auto;padding:clamp(22px,6vw,36px) clamp(15px,5vw,27px);
+  background:rgba(255,255,255,.88);border:1px solid #ffd1e1;border-radius:30px;
+  box-shadow:0 16px 45px #b52b5b13;backdrop-filter:blur(8px);
+}
+.screen.active{display:block;animation:entrance .65s ease both}
+h1{font-size:clamp(30px,8vw,44px);line-height:1.12;color:var(--deep);margin:12px 0}
+h2{color:var(--deep);font-size:clamp(22px,6vw,29px)}
+p{line-height:1.8;font-size:16px}
+.small{font-size:13px;opacity:.8}
+.big-emoji{font-size:74px;filter:drop-shadow(0 6px 12px #ff8ab844);animation:heartbeat 1.7s ease-in-out infinite}
+.envelope{font-size:95px;display:inline-block;cursor:pointer;animation:bob 2s ease-in-out infinite;filter:drop-shadow(0 9px 13px #ff8ab833)}
+.btn{
+  border:0;border-radius:28px;padding:13px 19px;margin:7px 4px;color:white;
+  background:linear-gradient(135deg,#ff8db4,#e74483);font-weight:800;
+  box-shadow:0 7px 18px #e7448326;transition:transform .2s,filter .2s;
+}
+.btn:hover{filter:saturate(1.15);transform:translateY(-2px)}
+.btn:active{transform:scale(.97)}
+.btn.secondary{background:#fff1f6;color:var(--deep);border:1px solid #ffc4d8;box-shadow:none}
+.btn:focus-visible{outline:3px solid #9c2c61;outline-offset:3px}
+.btn-row{display:flex;flex-wrap:wrap;justify-content:center;gap:4px;margin-top:18px}
+.sticker{display:inline-block;background:#fff1f6;border:1px solid #ffd1e1;border-radius:999px;padding:8px 12px;font-size:13px;margin:4px}
+.type-line{min-height:54px}
+.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+.photo-card{background:#fff;padding:7px 7px 11px;border-radius:16px;box-shadow:0 7px 18px #b52b5b15;transform:rotate(-1deg);transition:transform .3s}
+.photo-card:nth-child(even){transform:rotate(1.5deg)}
+.photo-card:hover{transform:rotate(0) scale(1.025)}
+.photo-card img{display:block;width:100%;height:clamp(130px,38vw,205px);object-fit:cover;border-radius:11px;background:#ffe0eb;color:#8b4761;font-size:12px}
+.caption{font-size:12px;padding:8px 2px 0}
+.letter{background:#fff9ef;border:1px dashed #f1a4bd;border-radius:20px;padding:21px;text-align:left;line-height:1.9;box-shadow:0 0 14px #ffc1d522}
+.letter p{font-size:15px}
+.note{font-size:12px;background:#fff1f6;border-radius:14px;padding:12px;margin-top:15px}
+#answer{min-height:30px;margin-top:15px}
+footer{position:relative;z-index:1;padding:15px 15px 28px;font-size:12px;color:#9a5872}
+.floating-heart{position:fixed;bottom:-40px;z-index:0;pointer-events:none;animation:floatUp linear forwards;opacity:.8}
+.falling-heart{position:fixed;top:-35px;z-index:5;pointer-events:none;animation:fallDown linear forwards}
+.sparkle{display:inline-block;animation:twinkle 1.5s ease-in-out infinite alternate}
+.music-note{font-size:12px;margin-top:12px;opacity:.75}
+@keyframes entrance{from{opacity:0;transform:translateY(17px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+@keyframes floatUp{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:.75}100%{transform:translateY(-115vh) rotate(35deg);opacity:0}}
+@keyframes fallDown{to{transform:translateY(110vh) rotate(360deg);opacity:0}}
+@keyframes twinkle{from{opacity:.45;transform:scale(.9)}to{opacity:1;transform:scale(1.12)}}
+@media(max-width:360px){.screen{padding:21px 12px}.btn{padding:12px 14px;font-size:14px}.photo-grid{gap:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="topbar">♡ MADE WITH LOVE, FOR MOMO ♡</div>
+<div class="progress" aria-label="Surprise progress"><div id="bar"></div></div>
+
+<main>
+  <section class="screen active" aria-label="Welcome">
+    <div class="big-emoji">💗</div>
+    <span class="sticker">A tiny surprise just for you</span>
+    <h1>Hey, Meri Momo! 🥹</h1>
+    <p class="type-line" id="welcomeText">Meri jaan, tumhare liye dil se kuch banaya hai.</p>
+    <p>Ready ho? Promise, thora sa cute hai… bilkul tumhari tarah. 🙈</p>
+    <div class="envelope" role="button" tabindex="0" aria-label="Open the surprise" onclick="next()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();next()}">💌</div>
+    <div class="btn-row"><button class="btn" onclick="next()">Open your surprise 💖</button></div>
+    <p class="small">P.S. Is page ko end tak zaroor dekhna. 🌸</p>
+  </section>
+
+  <section class="screen" aria-label="Apology">
+    <div class="big-emoji">🧸</div>
+    <h1>I'm Sorry, Momo</h1>
+    <p id="typedSorry" class="type-line">Meri jaan, mujhse ghalti hui…</p>
+    <p>Main apni ghalti ko justify nahi karna chahta. Mujhe afsos hai ke meri wajah se tum naraz hui ya tumhara dil dukha.</p>
+    <p>Kaash life mein bhi <b>Ctrl + Z</b> hota… lekin ab main ghalti sudharne ki koshish karunga. 🥺</p>
+    <span class="sticker">One sincere sorry, unlimited hugs 🫂</span>
+    <div class="btn-row">
+      <button class="btn" onclick="next()">Hamari yaadein dekho 📸</button>
+      <button class="btn secondary" onclick="prev()">Back</button>
+    </div>
+  </section>
+
+  <section class="screen" aria-label="Our memories">
+    <h1>Our Little World 📸</h1>
+    <p>Hamari choti choti yaadein mere liye bohat special hain. ❤️</p>
+    <div class="photo-grid">
+      <div class="photo-card"><img src="photo1.jpg" alt="Our memory one"><div class="caption">My favourite person 🥹</div></div>
+      <div class="photo-card"><img src="photo2.jpg" alt="Our memory two"><div class="caption">My happy place 💗</div></div>
+      <div class="photo-card"><img src="photo3.jpg" alt="Our memory three"><div class="caption">You make life sweeter 🌸</div></div>
+      <div class="photo-card"><img src="photo4.jpg" alt="Our memory four"><div class="caption">More memories to come ✨</div></div>
+      <div class="photo-card"><img src="photo5.jpg" alt="Our memory five"><div class="caption">A moment I treasure 💞</div></div>
+      <div class="photo-card"><img src="photo6.jpg" alt="Our memory six"><div class="caption">Always my favourite 🌷</div></div>
+      <div class="photo-card"><img src="photo7.jpg" alt="Our memory seven"><div class="caption">You and me ❤️</div></div>
+      <div class="photo-card"><img src="photo8.jpg" alt="Our memory eight"><div class="caption">A little piece of happiness ✨</div></div>
+      <div class="photo-card"><img src="photo9.jpg" alt="Our memory nine"><div class="caption">My sweetest memory 🧸</div></div>
+      <div class="photo-card"><img src="photo10.jpg" alt="Our memory ten"><div class="caption">More beautiful moments 💖</div></div>
+    </div>
+    <p>Har picture ke peeche ek feeling hai… aur meri favourite feeling tumhare saath hai. 💞</p>
+    <div class="btn-row">
+      <button class="btn" onclick="next()">A letter from my heart 💌</button>
+      <button class="btn secondary" onclick="prev()">Back</button>
+    </div>
+    <p class="small">Apni 10 pictures ko photo1.jpg se photo10.jpg tak naam de kar isi folder mein rakhna.</p>
+  </section>
+
+  <section class="screen" aria-label="Love letter">
+    <div class="big-emoji">💌</div>
+    <h1>From My Heart</h1>
+    <div class="letter">
+      <p><b>Meri pyari Momo, ❤️</b></p>
+      <p>Mujhe pata hai ke mujhse ghalti hui. Main apni ghalti ko chhupana ya uska bahana banana nahi chahta. Agar meri wajah se tumhara dil dukha hai, toh mujhe dil se afsos hai.</p>
+      <p>Tum mere liye bohat special ho. Main chahta hoon ke meri baatein hi nahi, mere actions bhi tumhein feel karwayein ke tumhari feelings mere liye important hain.</p>
+      <p>Main tumhari baat sunna, tumhein samajhna aur apni ghalti sudharna chahta hoon. Tumhein foran maan-ne par majboor nahi karunga. Jab tum ready ho, main tumhari baat sunne ke liye yahin hoon.</p>
+      <p>Kaash main tumhein abhi ek warm hug de pata aur keh pata, “I'm sorry, meri jaan.” 🫂</p>
+      <p><b>I love you, Momo. ❤️</b></p>
+      <p>Hamesha tumhara,<br><b>tumhara pagal sa banda 🙈</b></p>
+    </div>
+    <div class="btn-row">
+      <button class="btn" onclick="next()">Ek last question 🥹</button>
+      <button class="btn secondary" onclick="prev()">Back</button>
+    </div>
+  </section>
+
+  <section class="screen" aria-label="Forgiveness question">
+    <div class="big-emoji">🥹❤️</div>
+    <h1>Meri Momo…</h1>
+    <p>Kya tum mujhe maaf karne ka ek mauqa dogi?</p>
+    <p>Tumhari feelings mere liye important hain. Jab tum ready ho, main baat karna chahta hoon. 💗</p>
+    <div class="btn-row">
+      <button class="btn" onclick="forgive()">Haan, mere pagal ❤️</button>
+      <button class="btn secondary" onclick="moreLove()">Abhi aur manao 🙈</button>
+    </div>
+    <div id="answer" aria-live="polite"></div>
+    <div class="btn-row"><button class="btn secondary" onclick="restart()">Surprise dobara dekho ↻</button></div>
+  </section>
+
+  <section class="screen" aria-label="Final message">
+    <div class="big-emoji">💖</div>
+    <h1>One More Thing, Momo</h1>
+    <p>You are special to me, not because every day is perfect, but because I want to keep learning how to love you better.</p>
+    <p><b>I'm sorry. I love you. And I want to show it through my actions. ❤️</b></p>
+    <div style="font-size:34px"><span class="sparkle">✨</span> 💗 🧸 💗 <span class="sparkle">✨</span></div>
+    <button class="btn" onclick="hearts(45)">Send a thousand virtual hugs 🫂</button>
+    <button class="btn secondary" onclick="restart()">Watch it again 💌</button>
+  </section>
+</main>
+
+<footer>Every heart here was placed with love. ♡<br>Especially for Momo 🌷</footer>
+
+<script>
+const screens = [...document.querySelectorAll(".screen")];
+let current = 0;
+let floatTimer = null;
+
+function showScreen(index) {
+  current = Math.max(0, Math.min(index, screens.length - 1));
+  screens.forEach((screen, i) => screen.classList.toggle("active", i === current));
+  document.getElementById("bar").style.width = ((current + 1) / screens.length * 100) + "%";
+  window.scrollTo({ top: 0, behavior: "smooth" });
+  if (current === 1) typeText("typedSorry", "Meri jaan, mujhse ghalti hui… aur mujhe dil se afsos hai. ❤️", 42);
+  if (current === 5) hearts(22);
+}
+function next(){ showScreen(current + 1); }
+function prev(){ showScreen(current - 1); }
+function restart(){ showScreen(0); }
+
+let manaoCount = 0;
+const manaoMessages = [
+  "Achha meri Momo, ek aur baar dil se sorry. 🥺 Tumhari narazgi ki wajah samajhna chahta hoon, sirf tumhein chup karwana nahi. 💗",
+  "Virtual teddy hug aa raha hai! 🧸🫂 Main tumhari baat araam se sununga. Jab tum ready ho, tab baat kar lena. ❤️",
+  "Breaking news: tumhara pagal banda apni ghalti sudharne aur tumhein extra pyaar dene ki koshish mein laga hua hai. 😭💕",
+  "Last nahi, ek aur cute request: mujhe apne actions se behtar banne ka mauqa dena. Koi pressure nahi, meri jaan. 🌷"
+];
+
+function forgive(){
+  const answer = document.getElementById("answer");
+  answer.innerHTML = `
+    <div class="big-emoji" style="font-size:48px">🥹🫂💖</div>
+    <h2>Thank you, meri Momo!</h2>
+    <p>Thank you for hearing me out. I know trust is shown through actions, so I’ll do my best to make things right. You deserve care, honesty, and respect. ❤️</p>
+    <button class="btn" onclick="showScreen(5)">Read one last message 💌</button>
+  `;
+  hearts(35);
+}
+
+function moreLove(){
+  const answer = document.getElementById("answer");
+  const message = manaoMessages[manaoCount % manaoMessages.length];
+  manaoCount++;
+  answer.innerHTML = `
+    <div class="big-emoji" style="font-size:48px">🥺🌷</div>
+    <p>${message}</p>
+    <p class="small">No pressure, Momo. Take all the time you need. ❤️</p>
+  `;
+  hearts(14);
+}
+
+function typeText(id, text, speed) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.textContent = "";
+  let i = 0;
+  const timer = setInterval(() => {
+    if (!el.isConnected || i >= text.length) { clearInterval(timer); return; }
+    el.textContent += text.charAt(i++);
+  }, speed);
+}
+function hearts(count) {
+  const symbols = ["💗","💕","💖","❤️","✨","🌸"];
+  for (let i = 0; i < count; i++) {
+    const item = document.createElement("span");
+    item.className = "falling-heart";
+    item.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    item.style.left = Math.random() * 100 + "vw";
+    item.style.animationDuration = (2.5 + Math.random() * 3) + "s";
+    item.style.fontSize = (16 + Math.random() * 20) + "px";
+    document.body.appendChild(item);
+    setTimeout(() => item.remove(), 6000);
+  }
+}
+function floatHeart() {
+  const item = document.createElement("span");
+  item.className = "floating-heart";
+  item.textContent = ["💕","♡","💗","✨","🌸"][Math.floor(Math.random()*5)];
+  item.style.left = Math.random() * 100 + "vw";
+  item.style.fontSize = (14 + Math.random() * 18) + "px";
+  item.style.animationDuration = (6 + Math.random() * 4) + "s";
+  document.body.appendChild(item);
+  setTimeout(() => item.remove(), 10500);
+}
+floatTimer = setInterval(floatHeart, 850);
+</script>
+</body>
+</html>
